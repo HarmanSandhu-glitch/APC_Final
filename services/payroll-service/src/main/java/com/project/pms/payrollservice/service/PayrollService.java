@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class PayrollService {
@@ -17,10 +18,9 @@ public class PayrollService {
     @Autowired
     private PayrollRepository payrollRepository;
 
-@Autowired
-private EmployeeClient employeeClient;
+    @Autowired
+    private EmployeeClient employeeClient;
 
-    
     @Autowired
     private OrganizationClient organizationClient;
 
@@ -39,7 +39,7 @@ private EmployeeClient employeeClient;
         Double totalPay = grossPay - totalDeductions;
 
         Payroll payroll = new Payroll();
-        payroll.setEmployee(employee);
+        payroll.setEmployeeId(employee.getEmployeeId());
         payroll.setPayrollPayDate(new Date());
         payroll.setPayrollBaseSalary(baseSalary);
         payroll.setPayrollExperienceBonus(experienceBonus);
@@ -50,7 +50,7 @@ private EmployeeClient employeeClient;
     }
 
     public List<Payroll> getPayrollsForEmployee(Long employeeId) {
-        return payrollRepository.findByEmployeeEmployeeId(employeeId);
+        return payrollRepository.findByEmployeeId(employeeId);
     }
 
     private Double calculateTax(Double grossPay) {

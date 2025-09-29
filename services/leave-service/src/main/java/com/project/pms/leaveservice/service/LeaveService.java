@@ -16,7 +16,7 @@ public class LeaveService {
     private LeaveRepository leaveRepository;
 
     @Autowired
-    private EmployeeRepository employeeRepository;
+    private EmployeeClient employeeClient;
 
     public Leave applyForLeave(Long employeeId, Leave leave) {
         Employee employee = employeeClient.getEmployeeById(employeeId)
