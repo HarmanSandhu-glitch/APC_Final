@@ -1,9 +1,9 @@
-package com.project.pms.service;
+package com.project.pms.leaveservice.service;
 
-import com.project.pms.entity.Employee;
-import com.project.pms.entity.Leave;
-import com.project.pms.repository.EmployeeRepository;
-import com.project.pms.repository.LeaveRepository;
+import com.project.pms.leaveservice.entity.Employee;
+import com.project.pms.leaveservice.entity.Leave;
+import com.project.pms.leaveservice.repository.EmployeeRepository;
+import com.project.pms.leaveservice.repository.LeaveRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

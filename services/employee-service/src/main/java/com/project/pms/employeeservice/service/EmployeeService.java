@@ -1,8 +1,7 @@
 package com.project.pms.employeeservice.service;
 
-import com.project.pms.entity.Employee;
-import com.project.pms.repository.EmployeeRepository;
-import com.project.pms.repository.PayrollRepository;
+import com.project.pms.employeeservice.entity.Employee;
+import com.project.pms.employeeservice.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,9 +13,6 @@ public class EmployeeService {
 
     @Autowired
     private EmployeeRepository employeeRepository;
-
-    @Autowired
-    private PayrollRepository payrollRepository;
 
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
@@ -32,7 +28,6 @@ public class EmployeeService {
 
     @Transactional
     public void deleteEmployee(Long id) {
-        payrollRepository.deleteAll(payrollRepository.findByEmployeeEmployeeId(id));
         employeeRepository.deleteById(id);
     }
 }

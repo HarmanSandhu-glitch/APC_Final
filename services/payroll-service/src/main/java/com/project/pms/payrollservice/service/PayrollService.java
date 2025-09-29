@@ -1,9 +1,10 @@
-package com.project.pms.service;
+package com.project.pms.payrollservice.service;
 
-import com.project.pms.entity.Employee;
-import com.project.pms.entity.Payroll;
-import com.project.pms.entity.Position;
-import com.project.pms.repository.PayrollRepository;
+import com.project.pms.payrollservice.client.OrganizationClient;
+import com.project.pms.payrollservice.model.Employee;
+import com.project.pms.payrollservice.model.Payroll;
+import com.project.pms.payrollservice.model.Position;
+import com.project.pms.payrollservice.repository.PayrollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Date;
@@ -18,12 +19,15 @@ public class PayrollService {
 
     @Autowired
     private EmployeeService employeeService;
+    
+    @Autowired
+    private OrganizationClient organizationClient;
 
     public Payroll generatePayroll(Long employeeId, Map<String, Double> payload) {
         Employee employee = employeeService.getEmployeeById(employeeId)
                 .orElseThrow(() -> new RuntimeException("Employee not found"));
 
-        Position position = employee.getEmployeePosition();
+        Position position = organizationClient.getPositionById(employee.getPositionId());
         Double initialDeductions = (payload != null) ? payload.getOrDefault("deductions", 0.0) : 0.0;
 
         Double baseSalary = position.getPositionBaseSalary();
