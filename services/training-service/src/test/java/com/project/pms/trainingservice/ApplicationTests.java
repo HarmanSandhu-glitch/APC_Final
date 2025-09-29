@@ -1,7 +1,6 @@
-package com.project.pms.employeeservice;
+package com.project.pms.trainingservice;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class ApplicationTests {

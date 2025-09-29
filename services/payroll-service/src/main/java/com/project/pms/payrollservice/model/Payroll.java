@@ -1,8 +1,6 @@
 package com.project.pms.payrollservice.model;
 
-import jakarta.persistence.*;
 import java.util.Date;
-import lombok.Data;
 
 @Entity
 @Table(name = "payrolls")
@@ -13,14 +11,13 @@ public class Payroll {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long payrollId;
 
-  @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "employee_id", nullable = false)
-  private Employee employee;
+  @Column(name = "employee_id", nullable = false)
+   private Long employeeId;
 
   @Temporal(TemporalType.DATE)
   @Column(nullable = false)
   private Date payrollPayDate;
-
+  
   @Column(nullable = false)
   private Double payrollBaseSalary;
 

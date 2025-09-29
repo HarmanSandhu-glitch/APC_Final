@@ -1,4 +1,4 @@
-package com.project.pms.employeeservice.entity;
+package com.project.pms.reportingservice.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

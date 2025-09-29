@@ -1,15 +1,15 @@
 package com.project.pms.payrollservice.service;
 
+import com.project.pms.payrollservice.client.EmployeeClient;
 import com.project.pms.payrollservice.client.OrganizationClient;
 import com.project.pms.payrollservice.model.Employee;
 import com.project.pms.payrollservice.model.Payroll;
 import com.project.pms.payrollservice.model.Position;
 import com.project.pms.payrollservice.repository.PayrollRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class PayrollService {
@@ -17,14 +17,15 @@ public class PayrollService {
     @Autowired
     private PayrollRepository payrollRepository;
 
-    @Autowired
-    private EmployeeService employeeService;
+@Autowired
+private EmployeeClient employeeClient;
+
     
     @Autowired
     private OrganizationClient organizationClient;
 
     public Payroll generatePayroll(Long employeeId, Map<String, Double> payload) {
-        Employee employee = employeeService.getEmployeeById(employeeId)
+        Employee employee = employeeClient.getEmployeeById(employeeId)
                 .orElseThrow(() -> new RuntimeException("Employee not found"));
 
         Position position = organizationClient.getPositionById(employee.getPositionId());
