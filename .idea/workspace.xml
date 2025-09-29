@@ -4,16 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6063fd5-91bb-4ac3-9d79-0eef821bd27a" name="Changes" comment="" />
+    <list default="true" id="c6063fd5-91bb-4ac3-9d79-0eef821bd27a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/attendance-service/src/main/java/com/project/pms/attendanceservice/controller/AttendanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/attendance-service/src/main/java/com/project/pms/attendanceservice/entity/Attendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/attendance-service/src/main/java/com/project/pms/attendanceservice/repository/AttendanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/attendance-service/src/main/java/com/project/pms/attendanceservice/service/AttendanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/client/EmployeeClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/organization-service/src/main/java/com/project/pms/organizationservice/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/organization-service/src/main/java/com/project/pms/organizationservice/service/PositionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reporting-service/src/main/java/com/project/pms/reportingservice/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/employee-service/src/main/java/com/project/pms/employeeservice/entity/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/employee-service/src/main/java/com/project/pms/employeeservice/entity/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/repository/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/service/LeaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/service/LeaveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/performance-service/src/main/java/com/project/pms/performanceservice/repository/PerformanceReviewRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/performance-service/src/main/java/com/project/pms/performanceservice/repository/PerformanceReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/reporting-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/reporting-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/reporting-service/src/main/java/com/project/pms/reportingservice/ReportingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/reporting-service/src/main/java/com/project/pms/reportingservice/ReportingServiceApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "HarmanSandhu-glitch"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/HarmanSandhu-glitch/APC_Final.git",
+    "accountId": "ae4ae710-baeb-4449-bbed-8f7608589b18"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="33Mp8mEXxzUOBcEAjbiaVdBeWJh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,6 +60,9 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/run/media/harmn/New Volume/APCProject/payroll-management-system/services"
   }

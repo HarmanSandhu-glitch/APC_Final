@@ -2,7 +2,7 @@ package com.project.pms.leaveservice.service;
 
 import com.project.pms.leaveservice.entity.Employee;
 import com.project.pms.leaveservice.entity.Leave;
-import com.project.pms.leaveservice.repository.EmployeeRepository;
+import com.project.pms.leaveservice.client.EmployeeClient;
 import com.project.pms.leaveservice.repository.LeaveRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class LeaveService {
     private EmployeeRepository employeeRepository;
 
     public Leave applyForLeave(Long employeeId, Leave leave) {
-        Employee employee = employeeRepository.findById(employeeId)
+        Employee employee = employeeClient.getEmployeeById(employeeId)
                 .orElseThrow(() -> new RuntimeException("Employee not found"));
         leave.setEmployee(employee);
         return leaveRepository.save(leave);
