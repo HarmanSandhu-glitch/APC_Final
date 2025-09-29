@@ -1,22 +1,22 @@
-package com.project.pms.entity;
+package com.project.pms.organizationservice.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
 import java.util.Set;
+import lombok.Data;
 
 @Entity
 @Table(name = "departments")
 @Data
 public class Department {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long departmentId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long departmentId;
 
-    @Column(nullable = false, unique = true)
-    private String departmentName;
+  @Column(nullable = false, unique = true)
+  private String departmentName;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id")
-    private Set<Position> departmentPositions;
+  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @JoinColumn(name = "department_id")
+  private Set<Position> departmentPositions;
 }

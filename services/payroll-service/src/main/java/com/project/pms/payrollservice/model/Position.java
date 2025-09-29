@@ -1,4 +1,4 @@
-package com.project.pms.payrollservice.entity;
+package com.project.pms.payrollservice.model;
 
 import lombok.Data;
 

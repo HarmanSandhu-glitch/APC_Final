@@ -1,4 +1,4 @@
-package com.project.pms.entity;
+package com.project.pms.organizationservice.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -8,16 +8,16 @@ import lombok.Data;
 @Data
 public class Position {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long positionId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long positionId;
 
-    @Column(nullable = false)
-    private String positionTitle;
+  @Column(nullable = false)
+  private String positionTitle;
 
-    @Column(nullable = false)
-    private Double positionExperienceBonus = 0.0;
+  @Column(nullable = false)
+  private Double positionExperienceBonus = 0.0;
 
-    @Column(nullable = false)
-    private Double positionBaseSalary = 0.0;
+  @Column(nullable = false)
+  private Double positionBaseSalary = 0.0;
 }

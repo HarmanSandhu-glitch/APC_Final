@@ -1,12 +1,11 @@
-package com.project.pms.repository;
+package com.project.pms.leaveservice.repository;
 
-import com.project.pms.entity.Leave;
+import com.project.pms.leaveservice.entity.Leave;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 public interface LeaveRepository extends JpaRepository<Leave, Long> {
-    List<Leave> findByEmployeeEmployeeId(Long employeeId);
+  List<Leave> findByEmployeeEmployeeId(Long employeeId);
 }

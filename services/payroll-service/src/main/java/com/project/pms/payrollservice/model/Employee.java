@@ -1,14 +1,14 @@
-package com.project.pms.payrollservice.entity;
+package com.project.pms.payrollservice.model;
 
-import lombok.Data;
 import java.util.Date;
+import lombok.Data;
 
 @Data
 public class Employee {
-    private Long employeeId;
-    private String employeeName;
-    private String employeeEmail;
-    private Date employeeJoinDate;
-    private Long positionId;
-    private Long departmentId;
+  private Long employeeId;
+  private String employeeName;
+  private String employeeEmail;
+  private Date employeeJoinDate;
+  private Long positionId;
+  private Long departmentId;
 }

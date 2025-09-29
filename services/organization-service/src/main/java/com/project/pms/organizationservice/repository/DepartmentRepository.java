@@ -1,9 +1,8 @@
-package com.project.pms.repository;
+package com.project.pms.organizationservice.repository;
 
-import com.project.pms.entity.Department;
+import com.project.pms.organizationservice.entity.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DepartmentRepository extends JpaRepository<Department, Long> {
-}
+public interface DepartmentRepository extends JpaRepository<Department, Long> {}
