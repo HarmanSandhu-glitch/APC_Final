@@ -1,12 +1,15 @@
 package com.project.pms.employeeservice.service;
 
+import com.project.pms.employeeservice.client.OrganizationClient;
+import com.project.pms.employeeservice.dto.EmployeeResponse;
 import com.project.pms.employeeservice.entity.Employee;
+import com.project.pms.employeeservice.model.Department;
 import com.project.pms.employeeservice.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
+import java.time.ZoneId; // <-- Import ZoneId
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class EmployeeService {
@@ -14,20 +17,35 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    @Autowired
+    private OrganizationClient organizationClient;
+
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
     }
 
-    public Optional<Employee> getEmployeeById(Long id) {
-        return employeeRepository.findById(id);
+    public EmployeeResponse getEmployeeById(Long id) {
+        Employee employee = employeeRepository.findById(id).orElse(null);
+        if (employee == null) {
+            return null;
+        }
+
+        Department department = organizationClient.getDepartmentById(employee.getDepartmentId());
+
+        EmployeeResponse employeeResponse = new EmployeeResponse();
+        employeeResponse.setEmployeeId(employee.getEmployeeId());
+        employeeResponse.setEmployeeName(employee.getEmployeeName());
+        employeeResponse.setEmployeeEmail(employee.getEmployeeEmail());
+
+        employeeResponse.setEmployeeJoinDate(employee.getEmployeeJoinDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+
+        employeeResponse.setPositionId(employee.getPositionId());
+        employeeResponse.setDepartment(department);
+
+        return employeeResponse;
     }
 
-    public Employee saveEmployee(Employee employee) {
+    public Employee createEmployee(Employee employee) {
         return employeeRepository.save(employee);
-    }
-
-    @Transactional
-    public void deleteEmployee(Long id) {
-        employeeRepository.deleteById(id);
     }
 }
