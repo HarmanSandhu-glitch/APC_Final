@@ -1,8 +1,10 @@
 package com.project.pms.documentservice.repository;
 
 import com.project.pms.documentservice.entity.Document;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DocumentRepository extends MongoRepository<Document, String> {};
+// Change the ID type from String to Long to match your Document entity
+public interface DocumentRepository extends JpaRepository<Document, Long> {
+}

@@ -14,15 +14,15 @@ public class DocumentService {
     @Autowired
     private DocumentRepository documentRepository;
 
-    public Document saveFile(MultipartFile file) throws IOException {
+    public Document saveFile(MultipartFile file, Long employeeId) throws IOException {
         Document document = new Document();
-        document.setFileName(file.getOriginalFilename());
-        document.setFileType(file.getContentType());
-        document.setData(file.getBytes());
+        document.setEmployeeId(employeeId); // Set the employee ID
+        document.setDocumentTitle(file.getOriginalFilename());
+        document.setDocumentData(file.getBytes());
         return documentRepository.save(document);
     }
 
-    public Document getFile(String id) {
+    public Document getFile(Long id) {
         return documentRepository.findById(id).orElse(null);
     }
 }

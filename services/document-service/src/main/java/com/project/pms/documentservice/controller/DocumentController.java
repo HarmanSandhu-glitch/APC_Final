@@ -19,24 +19,26 @@ public class DocumentController {
     private DocumentService documentService;
 
     @PostMapping("/upload")
-    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file, @RequestParam("employeeId") Long employeeId) {
         try {
-            Document document = documentService.saveFile(file);
-            return ResponseEntity.ok("File uploaded successfully: " + document.getId());
+            Document document = documentService.saveFile(file, employeeId);
+            // Use getDocumentId() to match the field in your Document entity
+            return ResponseEntity.ok("File uploaded successfully with ID: " + document.getDocumentId());
         } catch (IOException e) {
             return ResponseEntity.status(500).body("Could not upload the file: " + e.getMessage());
         }
     }
 
     @GetMapping("/download/{id}")
-    public ResponseEntity<byte[]> downloadFile(@PathVariable String id) {
+    public ResponseEntity<byte[]> downloadFile(@PathVariable Long id) {
         Document document = documentService.getFile(id);
         if (document == null) {
             return ResponseEntity.notFound().build();
         }
+        // Correctly call the methods that exist on your Document entity
         return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getFileName() + "\"")
-                .contentType(MediaType.valueOf(document.getFileType()))
-                .body(document.getData());
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getDocumentTitle() + "\"")
+                .contentType(MediaType.APPLICATION_OCTET_STREAM) // A generic content type
+                .body(document.getDocumentData());
     }
 }
