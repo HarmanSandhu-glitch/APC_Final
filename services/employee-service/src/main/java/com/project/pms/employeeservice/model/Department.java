@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class Department {
-    private Long departmentId;
-    private String departmentName;
+    private Long id;
+    private String name;
 }

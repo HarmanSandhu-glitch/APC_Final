@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d379e96c-5740-46bb-925e-a2aba519810d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../services/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../services/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../services/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/EmployeeServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/client/OrganizationClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/dto/EmployeeResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/entity/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/model/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/model/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/repository/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/java/com/project/pms/employeeservice/service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services/employee-service/src/test/java/com/project/pms/employeeservice/ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "HarmanSandhu-glitch"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/HarmanSandhu-glitch/APC_Final.git",
+    "accountId": "ae4ae710-baeb-4449-bbed-8f7608589b18"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="33QHyGPenXJ6m6Kb2Fjf1cyKMIu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/run/media/harmn/New Volume/APCProject/payroll-management-system/services/employee-service"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d379e96c-5740-46bb-925e-a2aba519810d" name="Changes" comment="" />
+      <created>1759242628869</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759242628869</updated>
+    </task>
+    <servers />
+  </component>
+</project>

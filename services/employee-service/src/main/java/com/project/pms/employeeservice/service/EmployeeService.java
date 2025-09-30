@@ -8,7 +8,6 @@ import com.project.pms.employeeservice.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.ZoneId; // <-- Import ZoneId
 import java.util.List;
 
 @Service
@@ -20,32 +19,29 @@ public class EmployeeService {
     @Autowired
     private OrganizationClient organizationClient;
 
+    public Employee saveEmployee(Employee employee) {
+        return employeeRepository.save(employee);
+    }
+
+    public EmployeeResponse getEmployeeById(Long employeeId) {
+        Employee employee = employeeRepository.findById(employeeId).orElse(null);
+
+        if (employee != null) {
+            Department department = organizationClient.getDepartmentById(employee.getDepartmentId());
+
+            EmployeeResponse employeeResponse = new EmployeeResponse();
+            employeeResponse.setId(employee.getId());
+            employeeResponse.setFirstName(employee.getFirstName());
+            employeeResponse.setLastName(employee.getLastName());
+            employeeResponse.setEmail(employee.getEmail());
+            employeeResponse.setDepartment(department);
+            employeeResponse.setPositionId(employee.getPositionId());
+            return employeeResponse;
+        }
+        return null;
+    }
+
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
-    }
-
-    public EmployeeResponse getEmployeeById(Long id) {
-        Employee employee = employeeRepository.findById(id).orElse(null);
-        if (employee == null) {
-            return null;
-        }
-
-        Department department = organizationClient.getDepartmentById(employee.getDepartmentId());
-
-        EmployeeResponse employeeResponse = new EmployeeResponse();
-        employeeResponse.setEmployeeId(employee.getEmployeeId());
-        employeeResponse.setEmployeeName(employee.getEmployeeName());
-        employeeResponse.setEmployeeEmail(employee.getEmployeeEmail());
-
-        employeeResponse.setEmployeeJoinDate(employee.getEmployeeJoinDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-
-        employeeResponse.setPositionId(employee.getPositionId());
-        employeeResponse.setDepartment(department);
-
-        return employeeResponse;
-    }
-
-    public Employee createEmployee(Employee employee) {
-        return employeeRepository.save(employee);
     }
 }
