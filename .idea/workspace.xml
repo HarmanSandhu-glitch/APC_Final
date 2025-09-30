@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6063fd5-91bb-4ac3-9d79-0eef821bd27a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/attendance-service/src/main/java/com/project/pms/attendanceservice/entity/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/document-service/src/test/java/com/project/pms/documentservice/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/document-service/src/test/java/com/project/pms/documentservice/ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/LeaveServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/LeaveServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/entity/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/entity/Leave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/service/LeaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/leave-service/src/main/java/com/project/pms/leaveservice/service/LeaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/organization-service/src/test/java/com/project/pms/organizationservice/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/organization-service/src/test/java/com/project/pms/organizationservice/ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/payroll-service/src/main/java/com/project/pms/payrollservice/client/EmployeeClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/payroll-service/src/main/java/com/project/pms/payrollservice/repository/PayrollRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/payroll-service/src/main/java/com/project/pms/payrollservice/repository/PayrollRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/payroll-service/src/main/java/com/project/pms/payrollservice/service/PayrollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/payroll-service/src/main/java/com/project/pms/payrollservice/service/PayrollService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/payroll-service/src/test/java/com/project/pms/payrollservice/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/payroll-service/src/test/java/com/project/pms/payrollservice/ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/reporting-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/reporting-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/reporting-service/src/main/java/com/project/pms/reportingservice/entity/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/audit-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/audit-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +41,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.ConfigServerApplication.executor": "Run",
     "Application.EurekaServerApplication.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
